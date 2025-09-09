@@ -1,0 +1,131 @@
+@import "tailwindcss";
+@import "tailwindcss/utilities";
+
+:root {
+  /* Updated color palette for professional debt management system */
+  --background: oklch(1 0 0); /* Pure white background */
+  --foreground: oklch(0.25 0 0); /* Dark gray text */
+  --card: oklch(0.98 0 0); /* Light gray card background */
+  --card-foreground: oklch(0.3 0 0); /* Card text color */
+  --popover: oklch(1 0 0); /* White popover background */
+  --popover-foreground: oklch(0.25 0 0); /* Popover text */
+  --primary: oklch(0.55 0.15 200); /* Professional cyan primary */
+  --primary-foreground: oklch(1 0 0); /* White text on primary */
+  --secondary: oklch(0.75 0.12 85); /* Golden yellow accent */
+  --secondary-foreground: oklch(0.25 0 0); /* Dark text on secondary */
+  --muted: oklch(0.96 0 0); /* Very light gray muted */
+  --muted-foreground: oklch(0.45 0 0); /* Muted text */
+  --accent: oklch(0.75 0.12 85); /* Golden yellow accent */
+  --accent-foreground: oklch(1 0 0); /* White text on accent */
+  --destructive: oklch(0.55 0.22 25); /* Red for destructive actions */
+  --destructive-foreground: oklch(1 0 0); /* White text on destructive */
+  --border: oklch(0.9 0 0); /* Light border */
+  --input: oklch(0.98 0 0); /* Light input background */
+  --ring: oklch(0.55 0.15 200 / 0.3); /* Primary ring with opacity */
+  --chart-1: oklch(0.7 0.15 180); /* Teal chart color */
+  --chart-2: oklch(0.65 0.15 240); /* Blue chart color */
+  --chart-3: oklch(0.6 0.2 280); /* Purple chart color */
+  --chart-4: oklch(0.75 0.12 85); /* Golden chart color */
+  --chart-5: oklch(0.55 0.22 25); /* Red chart color */
+  --radius: 0.5rem;
+  --sidebar: oklch(0.98 0 0); /* Light sidebar background */
+  --sidebar-foreground: oklch(0.25 0 0); /* Dark sidebar text */
+  --sidebar-primary: oklch(0.55 0.15 200); /* Cyan sidebar primary */
+  --sidebar-primary-foreground: oklch(1 0 0); /* White sidebar primary text */
+  --sidebar-accent: oklch(0.75 0.12 85); /* Golden sidebar accent */
+  --sidebar-accent-foreground: oklch(0.25 0 0); /* Dark sidebar accent text */
+  --sidebar-border: oklch(0.9 0 0); /* Light sidebar border */
+  --sidebar-ring: oklch(0.55 0.15 200 / 0.3); /* Sidebar ring */
+}
+
+.dark {
+  /* Dark mode colors for professional appearance */
+  --background: oklch(0.08 0 0); /* Very dark background */
+  --foreground: oklch(0.95 0 0); /* Light text */
+  --card: oklch(0.12 0 0); /* Dark card background */
+  --card-foreground: oklch(0.95 0 0); /* Light card text */
+  --popover: oklch(0.12 0 0); /* Dark popover */
+  --popover-foreground: oklch(0.95 0 0); /* Light popover text */
+  --primary: oklch(0.6 0.15 200); /* Brighter cyan for dark mode */
+  --primary-foreground: oklch(0.08 0 0); /* Dark text on primary */
+  --secondary: oklch(0.8 0.12 85); /* Brighter golden for dark mode */
+  --secondary-foreground: oklch(0.08 0 0); /* Dark text on secondary */
+  --muted: oklch(0.15 0 0); /* Dark muted background */
+  --muted-foreground: oklch(0.7 0 0); /* Light muted text */
+  --accent: oklch(0.8 0.12 85); /* Bright golden accent */
+  --accent-foreground: oklch(0.08 0 0); /* Dark text on accent */
+  --destructive: oklch(0.6 0.22 25); /* Brighter red for dark mode */
+  --destructive-foreground: oklch(0.95 0 0); /* Light text on destructive */
+  --border: oklch(0.2 0 0); /* Dark border */
+  --input: oklch(0.15 0 0); /* Dark input background */
+  --ring: oklch(0.6 0.15 200 / 0.3); /* Primary ring for dark mode */
+  --chart-1: oklch(0.75 0.15 180); /* Brighter teal */
+  --chart-2: oklch(0.7 0.15 240); /* Brighter blue */
+  --chart-3: oklch(0.65 0.2 280); /* Brighter purple */
+  --chart-4: oklch(0.8 0.12 85); /* Brighter golden */
+  --chart-5: oklch(0.6 0.22 25); /* Brighter red */
+  --sidebar: oklch(0.1 0 0); /* Dark sidebar */
+  --sidebar-foreground: oklch(0.95 0 0); /* Light sidebar text */
+  --sidebar-primary: oklch(0.6 0.15 200); /* Bright cyan sidebar primary */
+  --sidebar-primary-foreground: oklch(0.08 0 0); /* Dark sidebar primary text */
+  --sidebar-accent: oklch(0.8 0.12 85); /* Bright golden sidebar accent */
+  --sidebar-accent-foreground: oklch(0.08 0 0); /* Dark sidebar accent text */
+  --sidebar-border: oklch(0.2 0 0); /* Dark sidebar border */
+  --sidebar-ring: oklch(0.6 0.15 200 / 0.3); /* Sidebar ring for dark mode */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+* {
+  border-color: var(--color-border);
+  outline-color: color-mix(in srgb, var(--color-ring) 50%, transparent);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+/* Added RTL support for Arabic text */
+[dir="rtl"] {
+  direction: rtl;
+}
